@@ -1,0 +1,25 @@
+import numpy as np
+>>> import matplotlib.pyplot as plt
+>>> filename= '/home/roberta/Work/data/2014-06-24_Bojan_ActivityRecognition/data_sample/Subject_2_LAYING.txt'
+>>> data= np.loadtxt(filename)
+>>> plt.figure()
+<matplotlib.figure.Figure object at 0x7f2bf1b78bd0>
+>>> plt.plot(data)
+[<matplotlib.lines.Line2D object at 0x7f2be94878d0>, <matplotlib.lines.Line2D object at 0x7f2be9487a50>, <matplotlib.lines.Line2D object at 0x7f2be9487bd0>]
+>>> plt.show()
+>>> fs= 50.0
+>>> dt= 1.0/fs
+>>> time= np.arange(len(data))*dt
+>>> plt.figure()
+<matplotlib.figure.Figure object at 0x7f2bed4cfb90>
+>>> plt.plot(time,data)
+[<matplotlib.lines.Line2D object at 0x7f2be923d3d0>, <matplotlib.lines.Line2D object at 0x7f2be923d550>, <matplotlib.lines.Line2D object at 0x7f2be923d6d0>]
+>>> plt.xlabel('time[s]')
+<matplotlib.text.Text object at 0x7f2be92ad9d0>
+>>> plt.ylabel('Acceleration[g]')
+<matplotlib.text.Text object at 0x7f2be9257ad0>
+>>> plt.title('Laying')
+<matplotlib.text.Text object at 0x7f2be92100d0>
+>>> plt.grid(True)
+>>> plt.show()
+
